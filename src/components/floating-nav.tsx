@@ -22,20 +22,20 @@ export function FloatingNav() {
         >
           <Home className="w-4 h-4" />
         </a>
-        <a
+        {/* <a
           href="#about"
           className="rounded-full w-8 h-8 flex items-center justify-center hover:bg-accent transition-colors"
           title="About"
         >
           <User className="w-4 h-4" />
-        </a>
-        <a
+        </a> */}
+        {/* <a
           href="#experience"
           className="rounded-full w-8 h-8 flex items-center justify-center hover:bg-accent transition-colors"
           title="Experience"
         >
           <Briefcase className="w-4 h-4" />
-        </a>
+        </a> */}
         <a
           href="#projects"
           className="rounded-full w-8 h-8 flex items-center justify-center hover:bg-accent transition-colors"
@@ -43,13 +43,13 @@ export function FloatingNav() {
         >
           <Code className="w-4 h-4" />
         </a>
-        <a
+        {/* <a
           href="#contact"
           className="rounded-full w-8 h-8 flex items-center justify-center hover:bg-accent transition-colors"
           title="Contact"
         >
           <Mail className="w-4 h-4" />
-        </a>
+        </a> */}
         <a
           href="https://linkedin.com/in/divyaditya-bhardwaj"
           target="_blank"
