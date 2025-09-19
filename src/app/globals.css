@@ -64,7 +64,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground dark:bg-gray-950 dark:text-white;
   }
 }
 
@@ -113,5 +113,16 @@ body::before {
   }
   100% {
     background-position: 100% 50%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 } 
