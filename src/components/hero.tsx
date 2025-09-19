@@ -1,10 +1,12 @@
+import { Github, Linkedin, Mail, FileText } from "lucide-react";
+
 export function Hero() {
   return (
     <section className="flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-16">
       <div className="flex-1 space-y-6">
         <div className="space-y-4">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-normal leading-tight">
-            Hi, I’m{" "}
+            Hi, I'm{" "}
             <span className="animated-gradient-text font-medium">
               Divyaditya
             </span>
@@ -14,19 +16,48 @@ export function Hero() {
             tech.
           </p>
         </div>
-        <div className="flex flex-wrap gap-4">
-          <a
-            href="#projects"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-          >
-            View My Work
-          </a>
-          {/* <a
-            href="#contact"
-            className="inline-flex items-center px-6 py-3 border border-border hover:bg-accent rounded-lg transition-colors"
-          >
-            Get In Touch
-          </a> */}
+
+        {/* Navigation Icons */}
+        <div className="flex items-center gap-4 pt-4">
+          <span className="text-sm font-medium text-muted-foreground">
+            Connect:
+          </span>
+          <div className="flex items-center gap-2">
+            <a
+              href="https://github.com/divyadityabhardwaj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full w-10 h-10 flex items-center justify-center bg-accent hover:bg-accent/80 transition-colors group"
+              title="GitHub"
+            >
+              <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
+            </a>
+            <a
+              href="https://linkedin.com/in/divyaditya-bhardwaj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full w-10 h-10 flex items-center justify-center bg-accent hover:bg-accent/80 transition-colors group"
+              title="LinkedIn"
+            >
+              <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+            </a>
+            <a
+              href="mailto:divyadityabhardwaj@gmail.com"
+              className="rounded-full w-10 h-10 flex items-center justify-center bg-accent hover:bg-accent/80 transition-colors group"
+              title="Email"
+            >
+              <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full w-10 h-10 flex items-center justify-center bg-accent hover:bg-accent/80 transition-colors group"
+              title="Resume"
+            >
+              <FileText className="w-5 h-5 group-hover:scale-110 transition-transform" />
+            </a>
+          </div>
         </div>
       </div>
 

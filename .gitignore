@@ -1,27 +1,84 @@
-# dependencies
+# Dependencies
 node_modules/
+.pnp
+.pnp.js
 
-# next.js build output
-.next/
+# Testing
+/coverage
 
-# static export output (optional, if you don't want to track the exported site)
-out/
+# Next.js
+/.next/
+/out/
 
-# local env files
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Vercel
+.vercel
 
-# OS
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# Vercel/Netlify
-.vercel/
-.netlify/ 
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Yarn
+yarn-error.log
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/

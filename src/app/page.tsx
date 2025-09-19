@@ -4,7 +4,6 @@ import { Experience } from "@/components/experience";
 import { Education } from "@/components/education";
 import { TechStack } from "@/components/tech-stack";
 import { Projects } from "@/components/projects";
-import { FloatingNav } from "@/components/floating-nav";
 import { AnimatedBackground } from "@/components/animated-background";
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
         <TechStack />
         <Projects />
       </div>
-      <FloatingNav />
     </main>
   );
 }
