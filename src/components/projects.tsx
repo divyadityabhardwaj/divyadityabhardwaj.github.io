@@ -48,7 +48,7 @@ export function Projects() {
               boxShadow: "0 8px 32px rgba(59,130,246,0.15)",
             }}
           >
-            <div className="relative w-full h-40 bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
+            <div className="relative w-full h-40 bg-gray-200  flex items-center justify-center">
               {/* Image placeholder, replace src later */}
               <img
                 src={project.image}
@@ -61,7 +61,7 @@ export function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-background/80 rounded-full p-2 hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors"
+                  className="bg-background/80 rounded-full p-2 hover:bg-blue-100 transition-colors"
                   title="GitHub"
                 >
                   <Github className="w-4 h-4" />
@@ -71,7 +71,7 @@ export function Projects() {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-background/80 rounded-full p-2 hover:bg-green-100 dark:hover:bg-green-900 transition-colors"
+                    className="bg-background/80 rounded-full p-2 hover:bg-green-100 transition-colors"
                     title="Live Preview"
                   >
                     <ExternalLink className="w-4 h-4" />
@@ -80,7 +80,7 @@ export function Projects() {
               </div>
             </div>
             <div className="flex-1 flex flex-col p-4">
-              <h3 className="text-lg font-semibold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              <h3 className="text-lg font-semibold mb-2 group-hover:text-blue-600 -blue-400 transition-colors">
                 {project.title}
               </h3>
               <p className="text-muted-foreground text-sm flex-1 group-hover:text-foreground transition-colors">

@@ -30,14 +30,14 @@ const technologies = [
 
 export function TechStack() {
   return (
-    <Card className="bg-background dark:bg-gray-950 p-6 space-y-6">
+    <Card className="bg-background p-6 space-y-6">
       <h2 className="text-2xl font-medium">Tech Stack</h2>
       <div className="flex flex-wrap gap-3">
         {technologies.map((tech) => (
           <motion.span key={tech}>
             <Badge
               variant="secondary"
-              className="dark:bg-white dark:text-black hover:scale-110 transition-transform cursor-pointer"
+              className="hover:scale-110 transition-transform cursor-pointer"
             >
               {tech}
             </Badge>

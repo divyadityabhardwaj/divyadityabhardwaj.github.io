@@ -33,7 +33,7 @@ export function About() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button className="bg-black hover:bg-black/90 text-white dark:bg-white dark:text-black dark:hover:bg-white/90 transition-transform hover:scale-105">
+          <Button className="bg-black hover:bg-black/90 text-white transition-transform hover:scale-105">
             <Download className="w-4 h-4 mr-2" />
             Resume
           </Button>
