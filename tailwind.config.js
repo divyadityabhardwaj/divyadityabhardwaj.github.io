@@ -16,6 +16,9 @@ module.exports = {
   		}
   	},
   	extend: {
+		  fontFamily: {
+			  sans: ['system-ui_regular_normal_u3lzd', 'sans-serif'],
+			},
   		colors: {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',

@@ -27,18 +27,6 @@ export function About() {
           engineering. Always exploring, always building.
         </p>
       </div>
-      <div>
-        <a
-          href={process.env.NEXT_PUBLIC_RESUME_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button className="bg-black hover:bg-black/90 text-white transition-transform hover:scale-105">
-            <Download className="w-4 h-4 mr-2" />
-            Resume
-          </Button>
-        </a>
-      </div>
     </motion.section>
   );
 }

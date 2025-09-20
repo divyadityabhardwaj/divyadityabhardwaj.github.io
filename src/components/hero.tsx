@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Download, Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "./ui/button";
 
 export function Hero() {
   return (
@@ -6,7 +7,6 @@ export function Hero() {
       <div className="flex-1 space-y-6">
         <div className="space-y-4">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-normal leading-tight">
-            Hi, I'm{" "}
             <span className="animated-gradient-text font-medium">
               Divyaditya
             </span>
@@ -18,32 +18,35 @@ export function Hero() {
         </div>
 
         {/* Navigation Icons */}
-        <div className="flex items-center gap-4 pt-4">
-          <span className="text-sm font-medium text-muted-foreground">
-            Connect:
-          </span>
+        <div className="flex items-center gap-4 pt-4 pb-6">
           <div className="flex items-center gap-2">
             <a
               href="https://github.com/divyadityabhardwaj"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full w-10 h-10 flex items-center justify-center bg-accent hover:bg-accent/80 transition-colors group"
+              className="rounded-lg w-10 h-10 flex items-center justify-center bg-accent hover:bg-accent/80 transition-colors group border-2 border-white/40"
               title="GitHub"
             >
-              <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <Github
+                className="w-5 h-5 group-hover:scale-110 transition-transform"
+                fill="white"
+              />
             </a>
             <a
               href="https://linkedin.com/in/divyaditya-bhardwaj"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full w-10 h-10 flex items-center justify-center bg-accent hover:bg-accent/80 transition-colors group"
+              className="rounded-lg w-10 h-10 flex items-center justify-center bg-accent hover:bg-accent/80 transition-colors group border-2 border-white/40"
               title="LinkedIn"
             >
-              <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <Linkedin
+                className="w-5 h-5 group-hover:scale-110 transition-transform"
+                fill="white"
+              />
             </a>
             <a
               href="mailto:divyadityabhardwaj@gmail.com"
-              className="rounded-full w-10 h-10 flex items-center justify-center bg-accent hover:bg-accent/80 transition-colors group"
+              className="rounded-lg w-10 h-10 flex items-center justify-center bg-accent hover:bg-accent/80 transition-colors group border-2 border-white/40"
               title="Email"
             >
               <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -52,7 +55,7 @@ export function Hero() {
               href="https://x.com/adino_there"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full w-10 h-10 flex items-center justify-center bg-accent hover:bg-accent/80 transition-colors group"
+              className="rounded-lg w-10 h-10 flex items-center justify-center bg-accent hover:bg-accent/80 transition-colors group border-2 border-white/40"
               title="X"
             >
               <svg
@@ -65,6 +68,16 @@ export function Hero() {
                   d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"
                 />
               </svg>
+            </a>
+            <a
+              href={process.env.NEXT_PUBLIC_RESUME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="rounded-lg h-10 px-4 flex items-center justify-center bg-accent hover:bg-accent/80 transition-colors group border-2 border-white/40 text-white hover:scale-105 transition-transform">
+                <Download className="w-4 h-4 mr-2" />
+                Resume
+              </Button>
             </a>
           </div>
         </div>
