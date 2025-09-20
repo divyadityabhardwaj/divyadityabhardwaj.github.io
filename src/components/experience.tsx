@@ -4,13 +4,7 @@ import { ChevronDown } from "lucide-react";
 
 export function Experience() {
   return (
-    <motion.section
-      className="space-y-6"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6 }}
-    >
+    <section className="space-y-6">
       <h2 className="text-2xl font-medium">Work Experience</h2>
       <motion.div
         className="space-y-4 rounded-lg bg-muted"
@@ -47,6 +41,6 @@ export function Experience() {
           </p>
         </div>
       </motion.div>
-    </motion.section>
+    </section>
   );
 }

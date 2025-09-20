@@ -1,3 +1,5 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
@@ -5,6 +7,7 @@ import { Experience } from "@/components/experience";
 import { Education } from "@/components/education";
 import { TechStack } from "@/components/tech-stack";
 import { Projects } from "@/components/projects";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -20,14 +23,30 @@ export default function Home() {
       {/* Main Content */}
       <main className="relative z-10 text-white">
         <div className="max-w-4xl mx-auto px-6 py-16 space-y-6">
-          <Card className="bg-background shadow-none space-y-6">
-            <Hero />
-            <About />
-            <Experience />
-            <Education />
-            <TechStack />
-            <Projects />
-          </Card>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <Card className="bg-background shadow-none space-y-6">
+              {/* <div className="border-b border-white/20 pb-6"> */}
+              <Hero />
+              {/* </div> */}
+              <div className="border-b border-white/20 pb-6">
+                <About />
+              </div>
+              <div className="border-b border-white/20 pb-6">
+                <Experience />
+              </div>
+              <div className="border-b border-white/20 pb-6">
+                <Education />
+              </div>
+              <div className="border-b border-white/20 pb-6">
+                <TechStack />
+              </div>
+              <Projects />
+            </Card>
+          </motion.div>
         </div>
       </main>
     </div>
