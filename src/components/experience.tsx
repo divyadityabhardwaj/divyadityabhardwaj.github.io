@@ -13,7 +13,7 @@ export function Experience() {
     >
       <h2 className="text-2xl font-medium">Work Experience</h2>
       <motion.div
-        className="space-y-4 p-6 rounded-lg bg-muted"
+        className="space-y-4 rounded-lg bg-muted"
         whileHover={{
           scale: 1.01,
           boxShadow: "0 8px 32px rgba(59,130,246,0.10)",

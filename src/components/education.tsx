@@ -13,7 +13,7 @@ export function Education() {
     >
       <h2 className="text-2xl font-medium">Education</h2>
       <motion.div
-        className="flex items-start gap-4 p-6 rounded-lg bg-muted"
+        className="flex items-start gap-4 rounded-lg bg-muted"
         whileHover={{
           scale: 1.01,
           boxShadow: "0 8px 32px rgba(59,130,246,0.10)",

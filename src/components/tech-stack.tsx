@@ -69,7 +69,7 @@ const itemVariants = {
 
 export function TechStack() {
   return (
-    <Card className="bg-background p-6 space-y-6">
+    <Card className="bg-background space-y-6">
       <h2 className="text-2xl font-medium">Tech Stack</h2>
       <motion.div
         className="flex flex-wrap gap-3"
