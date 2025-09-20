@@ -11,7 +11,7 @@ export default function Home() {
     <div className="min-h-screen w-full relative">
       {/* Violet Abyss */}
       <div
-        className="absolute inset-0 z-0"
+        className="fixed inset-0 z-0 position-fixed"
         style={{
           background:
             "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(34, 197, 94, 0.25), transparent 70%), #000000",

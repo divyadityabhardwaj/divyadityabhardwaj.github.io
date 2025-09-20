@@ -167,18 +167,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Subtle animated gradient background (less bright, perfect loop) */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: linear-gradient(120deg, rgba(220,225,235,0.06) 0%, rgba(180,200,220,0.08) 50%, rgba(220,225,235,0.06) 100%);
-  background-size: 300% 300%;
-  animation: subtle-gradient-move 18s ease-in-out infinite;
-}
-
 @keyframes subtle-gradient-move {
   0% {
     background-position: 0% 50%;
