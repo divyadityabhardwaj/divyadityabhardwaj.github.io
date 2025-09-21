@@ -1,6 +1,7 @@
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import { Typewriter } from "react-simple-typewriter";
+import RotatingText from "./RotatingText";
 
 export function Hero() {
   return (
@@ -13,23 +14,26 @@ export function Hero() {
             </span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-lg">
-            I build{" "}
-            <span className="font-semibold text-accent">
-              <Typewriter
-                words={["backends", "webapps", "frontends", "APIs"]}
-                loop={0}
-                cursor
-                cursorStyle="|"
-                typeSpeed={80}
-                deleteSpeed={60}
-                delaySpeed={1400}
+            I build
+            <span className="align-middle">
+              <RotatingText
+                texts={["backends", "webapps", "frontends", "APIs"]}
+                mainClassName="inline-flex items-center px-2 sm:px-2 md:px-3 bg-accent text-accent-foreground py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.025}
+                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                rotationInterval={2000}
               />
             </span>
           </p>
         </div>
 
         {/* Navigation Icons */}
-        <div className="flex items-center gap-4 pt-4 pb-6">
+        <div className="flex items-center gap-4  pb-6">
           <div className="flex items-center gap-2">
             <a
               href="https://github.com/divyadityabhardwaj"
