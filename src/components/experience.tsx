@@ -1,46 +1,133 @@
 "use client";
-import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+
+const experienceLevels = [
+  {
+    title: "Full Stack Intern",
+    company: "CAPGRID",
+    dates: "Feb 2025 - July 2025",
+  },
+  {
+    title: "SDE 1",
+    company: "CAPGRID",
+    dates: "Aug 2025 - Present",
+  },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 export function Experience() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+
   return (
-    <section className="space-y-6">
-      <h2 className="text-2xl font-medium">Work Experience</h2>
-      <motion.div
-        className="space-y-4 rounded-lg bg-muted"
-        whileHover={{
-          scale: 1.01,
-          boxShadow: "0 8px 32px rgba(59,130,246,0.10)",
-        }}
-        transition={{ duration: 0.3 }}
-      >
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-lg font-medium">CAPGRID</h3>
-            <p className="text-muted-foreground">Full Stack Developer</p>
-          </div>
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <span>Dec 2024 - Present</span>
-            {/* <ChevronDown className="w-4 h-4" /> */}
-          </div>
-        </div>
-        <div className="text-muted-foreground space-y-2 text-sm">
-          <p>
-            • Led backend development as the sole backend engineer across 3
-            sprints, delivering critical features independently in a high-paced
-            Agile environment.
-          </p>
-          <p>
-            • Architected and secured GraphQL APIs with role-based access
-            control for internal and guest users, enabling safe multi-tenant
-            access across modules.
-          </p>
-          <p>
-            • Boosted API performance by ~40% by refactoring MongoDB queries
-            using aggregation pipelines.
-          </p>
-        </div>
-      </motion.div>
+    <section className="space-y-8" id="experience">
+      <h2 className="text-2xl font-medium text-foreground text-center">
+        Experience
+      </h2>
+      <div ref={ref} className="relative max-w-2xl mx-auto">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          {experienceLevels.map((exp, index) => (
+            <motion.div
+              key={index}
+              className="relative flex items-start"
+              variants={itemVariants}
+            >
+              {/* Dotted Arrow Connector */}
+              {index < experienceLevels.length - 1 && (
+                <div className="relative left-0 top-8 h-full w-px">
+                  <motion.svg
+                    width="20"
+                    height="100%"
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                  >
+                    <defs>
+                      <pattern
+                        id="repeating-arrow-pattern"
+                        patternUnits="userSpaceOnUse"
+                        width="20"
+                        height="48"
+                      >
+                        <line
+                          x1="10"
+                          y1="0"
+                          x2="10"
+                          y2="32"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeDasharray="4 4"
+                        />
+                        <polyline
+                          points="6 38, 10 42, 14 38"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </pattern>
+                    </defs>
+                    <motion.rect
+                      width="20"
+                      x="0"
+                      y="0"
+                      fill="url(#repeating-arrow-pattern)"
+                      className="text-muted-foreground"
+                      variants={{
+                        hidden: { height: 0 },
+                        visible: {
+                          height: "100%",
+                          transition: {
+                            delay: index * 0.5 + 0.5,
+                            duration: 0.4,
+                            ease: "easeInOut",
+                          },
+                        },
+                      }}
+                    />
+                  </motion.svg>
+                </div>
+              )}
+
+              <div className="pl-8 flex-1">
+                <p className="text-xs text-muted-foreground mb-1">
+                  {exp.dates}
+                </p>
+                <h3 className="text-lg font-semibold text-foreground mb-0.5">
+                  {exp.title}
+                </h3>
+                <h4 className="text-sm font-normal text-muted-foreground">
+                  {exp.company}
+                </h4>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }

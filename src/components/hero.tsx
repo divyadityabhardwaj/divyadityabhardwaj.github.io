@@ -12,17 +12,17 @@ export function Hero() {
             <GlowingName text="Divyaditya Bhardwaj" className="" />
           </h1>
           <p className="text-lg text-muted-foreground max-w-lg">
-            I build
-            <span className="align-middle">
+            I build{" "}
+            <span className="align-middle bg-white rounded-full px-3 py-1 shadow-md border border-gray-200">
               <RotatingText
                 texts={["backends", "webapps", "frontends", "APIs"]}
-                mainClassName="inline-flex items-center px-2 sm:px-2 md:px-3 bg-accent text-accent-foreground py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                mainClassName="inline-flex items-center bg-transparent text-black font-semibold"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 exit={{ y: "-120%" }}
                 staggerDuration={0.025}
-                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                splitLevelClassName="overflow-hidden"
                 transition={{ type: "spring", damping: 30, stiffness: 400 }}
                 rotationInterval={2000}
               />
