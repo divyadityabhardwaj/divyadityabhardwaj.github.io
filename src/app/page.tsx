@@ -17,60 +17,73 @@ export default function Home() {
         className="fixed inset-0 z-0"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(34, 197, 94, 0.25), transparent 70%), #000000",
+            "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(34, 197, 94, 0.25), transparent 70%), #111010",
         }}
       />
       {/* Main Content */}
       <main className="relative z-10 text-white">
         <div className="max-w-4xl mx-auto px-6 py-16 space-y-6">
-          <Card className="bg-background shadow-none space-y-6">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0 }}
-            >
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0 }}
+            // className="relative flex w-full rounded-xl border-[0.5px] border-white/20 transform-gpu bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] cursor-grab z-10 max-sm:h-max p-0.5"
+          >
+            {/* <div className="flex flex-col overflow-hidden size-full relative z-10 p-5 items-start justify-start gap-8 max-sm:h-[275px] max-sm:gap-4 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full"> */}
+              {" "}
               <Hero />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
-              className="border-b border-white/20 pb-6"
-            >
+            {/* </div> */}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+            className="relative flex w-full rounded-xl border-[0.5px] border-white/20 transform-gpu bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] cursor-grab z-10 max-sm:h-max p-0.5"
+          >
+            <div className="flex flex-col overflow-hidden size-full relative z-10 p-5 items-start justify-start gap-8 max-sm:h-[275px] max-sm:gap-4 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full">
               <About />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-              className="border-b border-white/20 pb-6"
-            >
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+            className="relative flex w-full rounded-xl border-[0.5px] border-white/20 transform-gpu bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] cursor-grab z-10 max-sm:h-max p-0.5"
+          >
+            <div className="flex flex-col overflow-hidden size-full relative z-10 p-5 items-start justify-start gap-8 max-sm:h-[275px] max-sm:gap-4 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full">
               <Experience />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.45 }}
-              className="border-b border-white/20 pb-6"
-            >
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.45 }}
+            className="relative flex w-full rounded-xl border-[0.5px] border-white/20 transform-gpu bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] cursor-grab z-10 max-sm:h-max p-0.5"
+          >
+            <div className="flex flex-col overflow-hidden size-full relative z-10 p-5 items-start justify-start gap-8 max-sm:h-[275px] max-sm:gap-4 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full">
               <Education />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-              className="border-b border-white/20 pb-6"
-            >
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+            className="relative flex w-full rounded-xl border-[0.5px] border-white/20 transform-gpu bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] cursor-grab z-10 max-sm:h-max p-0.5"
+          >
+            <div className="flex flex-col overflow-hidden size-full relative z-10 p-5 items-start justify-start gap-8 max-sm:h-[275px] max-sm:gap-4 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full">
               <TechStack />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.75 }}
-            >
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.75 }}
+            className="relative flex w-full rounded-xl border-[0.5px] border-white/20 transform-gpu bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] cursor-grab z-10 max-sm:h-max p-0.5"
+          >
+            <div className="flex flex-col overflow-hidden size-full relative z-10 p-5 items-start justify-start gap-8 max-sm:h-[275px] max-sm:gap-4 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full">
               <Projects />
-            </motion.div>
-          </Card>
+            </div>
+          </motion.div>
         </div>
       </main>
     </div>

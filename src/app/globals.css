@@ -1,15 +1,12 @@
-/* Add this if the font is custom and needs loading */
-@font-face {
-  font-family: 'system-ui_regular_normal_u3lzd';
-  src: url('/path/to/your/font-file.woff2') format('woff2'), /* Replace with actual path */
-       url('/path/to/your/font-file.woff') format('woff');   /* Replace with actual path */
-  font-weight: normal;
-  font-style: normal;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
 
 :root {
   --text-primary: #fff;
@@ -172,10 +169,6 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 @keyframes subtle-gradient-move {
   0% {
     background-position: 0% 50%;
@@ -206,8 +199,4 @@ html {
   100% {
     background-position: 100% 50%;
   }
-}
-
-html {
-  font-family: 'system-ui_regular_normal_u3lzd', sans-serif;
 }
