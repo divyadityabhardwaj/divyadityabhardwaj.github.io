@@ -1,17 +1,15 @@
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
-import { Typewriter } from "react-simple-typewriter";
 import RotatingText from "./RotatingText";
+import { GlowingName } from "./GlowingName";
 
 export function Hero() {
   return (
     <section className="flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-16">
       <div className="flex-1 space-y-6">
         <div className="space-y-4">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-normal leading-tight">
-            <span className="animated-gradient-text font-medium">
-              Divyaditya
-            </span>
+          <h1 className="text-2xl font-normal align-left">
+            <GlowingName text="Divyaditya Bhardwaj" className="" />
           </h1>
           <p className="text-lg text-muted-foreground max-w-lg">
             I build
