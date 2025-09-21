@@ -17,8 +17,8 @@ export function About() {
         <p>
           Full stack developer with practical experience crafting web
           applications and AI-powered tools using React, Next.js, Node.js, and
-          Python. Comfortable working across the stack — from designing
-          intuitive APIs to building responsive interfaces — with a focus on
+          Python. Comfortable working across the stack - from designing
+          intuitive APIs to building responsive interfaces - with a focus on
           clean architecture and performance.
         </p>
         <p>
