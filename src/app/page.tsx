@@ -23,30 +23,54 @@ export default function Home() {
       {/* Main Content */}
       <main className="relative z-10 text-white">
         <div className="max-w-4xl mx-auto px-6 py-16 space-y-6">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <Card className="bg-background shadow-none space-y-6">
-              {/* <div className="border-b border-white/20 pb-6"> */}
+          <Card className="bg-background shadow-none space-y-6">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0 }}
+            >
               <Hero />
-              {/* </div> */}
-              <div className="border-b border-white/20 pb-6">
-                <About />
-              </div>
-              <div className="border-b border-white/20 pb-6">
-                <Experience />
-              </div>
-              <div className="border-b border-white/20 pb-6">
-                <Education />
-              </div>
-              <div className="border-b border-white/20 pb-6">
-                <TechStack />
-              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+              className="border-b border-white/20 pb-6"
+            >
+              <About />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+              className="border-b border-white/20 pb-6"
+            >
+              <Experience />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.45 }}
+              className="border-b border-white/20 pb-6"
+            >
+              <Education />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+              className="border-b border-white/20 pb-6"
+            >
+              <TechStack />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.75 }}
+            >
               <Projects />
-            </Card>
-          </motion.div>
+            </motion.div>
+          </Card>
         </div>
       </main>
     </div>
