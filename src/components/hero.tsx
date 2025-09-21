@@ -1,5 +1,6 @@
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
+import { Typewriter } from "react-simple-typewriter";
 
 export function Hero() {
   return (
@@ -12,8 +13,18 @@ export function Hero() {
             </span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-lg">
-            A developer with a curiosity-driven mindset and a love for building
-            tech.
+            I build{" "}
+            <span className="font-semibold text-accent">
+              <Typewriter
+                words={["backends", "webapps", "frontends", "APIs"]}
+                loop={0}
+                cursor
+                cursorStyle="|"
+                typeSpeed={80}
+                deleteSpeed={60}
+                delaySpeed={1400}
+              />
+            </span>
           </p>
         </div>
 
