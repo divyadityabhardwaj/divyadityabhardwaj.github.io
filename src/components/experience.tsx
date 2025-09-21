@@ -41,9 +41,7 @@ export function Experience() {
 
   return (
     <section className="space-y-8" id="experience">
-      <h2 className="text-2xl font-medium text-foreground text-center">
-        Experience
-      </h2>
+      <h2 className="text-2xl font-medium text-foreground ">Experience</h2>
       <div ref={ref} className="relative max-w-2xl mx-auto">
         <motion.div
           variants={containerVariants}

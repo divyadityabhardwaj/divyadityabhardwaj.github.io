@@ -13,7 +13,7 @@ export function Education() {
     >
       <h2 className="text-2xl font-medium">Education</h2>
       <motion.div
-        className="flex items-start gap-4 p-6 rounded-lg bg-muted"
+        className="flex items-start gap-4  rounded-lg bg-muted"
         transition={{ duration: 0.3 }}
       >
         <div className="flex-shrink-0 mt-1">

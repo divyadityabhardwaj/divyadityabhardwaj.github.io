@@ -39,24 +39,26 @@ export default function Home() {
               <About />
             </div>
           </motion.div>
+          {/* Experience & Education side by side */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-            className="relative flex w-full rounded-xl border-[0.5px] border-white/20 transform-gpu bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] cursor-grab z-10 max-sm:h-max p-0.5"
+            className="relative flex w-full z-10 max-sm:h-max"
           >
-            <div className="flex flex-col overflow-hidden size-full relative z-10 p-5 items-start justify-start gap-8 max-sm:h-[275px] max-sm:gap-4 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full">
-              <Experience />
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.45 }}
-            className="relative flex w-full rounded-xl border-[0.5px] border-white/20 transform-gpu bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] cursor-grab z-10 max-sm:h-max p-0.5"
-          >
-            <div className="flex flex-col overflow-hidden size-full relative z-10 p-5 items-start justify-start gap-8 max-sm:h-[275px] max-sm:gap-4 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full">
-              <Education />
+            <div className="flex flex-col md:flex-row w-full gap-8">
+              {/* Experience Box */}
+              <div className="flex-1 w-full md:w-1/2 rounded-xl border-[0.5px] border-white/20 bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] p-0.5">
+                <div className="overflow-hidden relative z-10 p-5 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full h-full">
+                  <Experience />
+                </div>
+              </div>
+              {/* Education Box */}
+              <div className="flex-1 w-full md:w-1/2 rounded-xl border-[0.5px] border-white/20 bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] p-0.5">
+                <div className="overflow-hidden relative z-10 p-5 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full h-full">
+                  <Education />
+                </div>
+              </div>
             </div>
           </motion.div>
           <motion.div

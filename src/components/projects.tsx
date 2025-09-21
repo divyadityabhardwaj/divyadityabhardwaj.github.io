@@ -38,7 +38,7 @@ export function Projects() {
         {projects.map((project, i) => (
           <motion.div
             key={project.title}
-            className="bg-muted rounded-lg overflow-hidden flex flex-col group shadow-lg border border-border"
+            className="bg-muted rounded-lg overflow-hidden flex flex-col group shadow-lg border border-white/30"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
