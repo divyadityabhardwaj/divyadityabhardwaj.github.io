@@ -10,7 +10,6 @@ import {
   FaNodeJs,
   FaDocker,
   FaGit,
-  FaAws,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -23,8 +22,6 @@ import {
   SiPostgresql,
   SiMysql,
   SiGraphql,
-  SiTensorflow,
-  SiOpencv,
   SiRedux,
   SiTailwindcss,
   SiApollographql,
@@ -34,7 +31,7 @@ import {
   SiNetlify,
   SiVercel,
 } from "react-icons/si";
-import { DiFirebase, DiGithub, DiJira } from "react-icons/di";
+import { DiJira } from "react-icons/di";
 import { Github } from "lucide-react";
 
 const technologies = [
