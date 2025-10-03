@@ -51,7 +51,7 @@ export function Experience() {
           {experienceLevels.map((exp, index) => (
             <motion.div
               key={index}
-              className="relative flex items-start"
+              className="relative flex items-start py-2 md:py-3" // reduced padding on mobile
               variants={itemVariants}
             >
               {/* Dotted Arrow Connector */}
@@ -124,6 +124,16 @@ export function Experience() {
               </div>
             </motion.div>
           ))}
+          {/* Separator lines between experiences */}
+          {experienceLevels.length > 1 &&
+            experienceLevels.map((_, idx) =>
+              idx < experienceLevels.length - 1 ? (
+                <div
+                  key={`sep-${idx}`}
+                  className="w-full h-px bg-white/10 my-1 md:my-0"
+                />
+              ) : null
+            )}
         </motion.div>
       </div>
     </section>
