@@ -33,11 +33,11 @@ const itemVariants = {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      duration: 0.5,
     },
   },
 };
+
 
 export function Experience() {
   const ref = useRef(null);
@@ -56,7 +56,7 @@ export function Experience() {
           {experienceLevels.map((exp, index) => (
             <motion.div
               key={index}
-              // variants={itemVariants}
+              variants={itemVariants}
               className="relative group"
             >
               {/* Card Container */}
@@ -89,9 +89,6 @@ export function Experience() {
                     {exp.description}
                   </p>
                 </div>
-
-                {/* Hover Effect Gradient */}
-                {/* <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all duration-300 pointer-events-none" /> */}
               </div>
             </motion.div>
           ))}
