@@ -6,6 +6,7 @@ import { Experience } from "@/components/experience";
 import { Education } from "@/components/education";
 import { TechStack } from "@/components/tech-stack";
 import { Projects } from "@/components/projects";
+import { SpotifyNowPlaying } from "@/components/SpotifyNowPlaying";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -30,6 +31,16 @@ export default function Home() {
           >
             <Hero />
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <SpotifyNowPlaying />
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
