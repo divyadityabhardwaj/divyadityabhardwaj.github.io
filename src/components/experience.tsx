@@ -8,13 +8,13 @@ const experienceLevels = [
     title: "Full Stack Intern",
     company: "CAPGRID",
     dates: "Feb 2025 - July 2025",
-    description: "Building scalable web applications with modern tech stack",
+    // description: "Building scalable web applications with modern tech stack",
   },
   {
     title: "SDE 1",
     company: "CAPGRID",
     dates: "Aug 2025 - Present",
-    description: "Leading full-stack development and architecture decisions",
+    // description: "Leading full-stack development and architecture decisions",
   },
 ];
 
@@ -37,7 +37,6 @@ const itemVariants = {
     },
   },
 };
-
 
 export function Experience() {
   const ref = useRef(null);
@@ -85,9 +84,9 @@ export function Experience() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  {/* <p className="text-sm text-muted-foreground leading-relaxed">
                     {exp.description}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </motion.div>
