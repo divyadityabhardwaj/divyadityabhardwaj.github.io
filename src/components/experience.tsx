@@ -50,51 +50,31 @@ export function Experience() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="space-y-6"
+          className="divide-y divide-white/[0.07]"
         >
-          {experienceLevels.map((exp, index) => (
+          {experienceLevels.map((exp) => (
             <motion.div
-              key={index}
+              key={`${exp.company}-${exp.title}`}
               variants={itemVariants}
-              className="relative group"
+              className="group grid gap-4 py-6 first:pt-0 last:pb-0 md:grid-cols-[minmax(0,220px)_1fr] md:gap-8"
             >
-              {/* Card Container */}
-              <div className="relative bg-gradient-to-br from-zinc-900/40 to-zinc-800/20 rounded-xl border border-white/10 p-5 ">
-                {/* Timeline Dot & Line */}
-                {index < experienceLevels.length - 1 && (
-                  <div className="absolute -bottom-6 left-5 w-px h-6 bg-gradient-to-b from-blue-500/50 to-transparent" />
-                )}
-
-                {/* Content */}
-                <div className="space-y-3">
-                  {/* Header */}
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-white transition-colors">
-                        {exp.title}
-                      </h3>
-                      <div className="flex items-center gap-2 text-muted-foreground mt-1">
-                        <p className="text-sm font-medium">{exp.company}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-zinc-400 bg-zinc-800/50 px-3 py-1.5 rounded-full border border-white/5 w-fit">
-                      <Calendar className="w-3.5 h-3.5" />
-                      <span>{exp.dates}</span>
-                    </div>
-                  </div>
-
-                  {/* Description */}
-                  {/* <p className="text-sm text-muted-foreground leading-relaxed">
-                    {exp.description}
-                  </p> */}
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground/90">
+                  <Calendar className="h-3.5 w-3.5" />
+                  <span>{exp.dates}</span>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-lg font-semibold tracking-tight text-foreground transition-colors group-hover:text-foreground/80">
+                    {exp.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">{exp.company}</p>
                 </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Background Decoration */}
-        <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
       </div>
     </section>
   );

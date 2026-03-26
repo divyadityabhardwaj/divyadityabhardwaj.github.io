@@ -12,22 +12,21 @@ export function Education() {
       transition={{ duration: 0.6 }}
     >
       <h2 className="text-2xl font-medium">Education</h2>
-      <motion.div
-        className="flex items-start gap-4  rounded-lg bg-muted"
-        transition={{ duration: 0.3 }}
-      >
-        <div className="flex-shrink-0 mt-1">
-          <GraduationCap className="w-5 h-5 text-muted-foreground" />
-        </div>
-        <div className="flex-1">
-          <div className="flex items-center justify-between mb-2">
-            <h3 className="text-lg font-medium">Bennett University</h3>
-            <span className="text-muted-foreground">2022 - 2026</span>
+      <motion.div className="border-t border-white/[0.07] py-6" transition={{ duration: 0.3 }}>
+        <div className="grid items-start gap-5 md:grid-cols-[minmax(0,140px)_1fr] md:gap-6">
+          <div className="flex items-center gap-2 pt-1 text-xs text-muted-foreground/90">
+            <GraduationCap className="h-3.5 w-3.5" />
+            <span>2022 - 2026</span>
           </div>
-          <p className="text-muted-foreground mb-1">
-            B. Tech. in Computer Science and Engineering
-          </p>
-          <p className="text-muted-foreground text-sm">CGPA: 9.22/10</p>
+          <div className="space-y-2">
+            <h3 className="max-w-[16rem] text-lg font-medium leading-tight tracking-tight">
+              Bennett University
+            </h3>
+            <p className="max-w-[18rem] text-sm leading-6 text-muted-foreground">
+              B. Tech. in Computer Science and Engineering
+            </p>
+            <p className="text-sm text-muted-foreground">CGPA: 9.22/10</p>
+          </div>
         </div>
       </motion.div>
     </motion.section>

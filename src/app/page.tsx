@@ -22,7 +22,7 @@ export default function Home() {
       />
       {/* Main Content */}
       <main className="relative z-10 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-16 space-y-6">
+        <div className="max-w-4xl mx-auto px-6 py-16 space-y-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -46,56 +46,46 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative flex w-full rounded-xl border-[0.5px] border-white/20 transform-gpu bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] cursor-grab z-10 max-sm:h-max p-0.5"
+            className="border-t border-white/10 pt-8"
           >
-            <div className="flex flex-col overflow-hidden size-full relative z-10 p-5 items-start justify-start gap-8 max-sm:h-[275px] max-sm:gap-4 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full">
-              <About />
-            </div>
+            <About />
           </motion.div>
-          {/* Experience & Education side by side */}
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative flex w-full z-10 max-sm:h-max"
+            className="border-t border-white/10 pt-8"
           >
-            <div className="flex flex-col md:flex-row w-full gap-8">
-              {/* Experience Box */}
-              <div className="flex-1 w-full md:w-1/2 rounded-xl border-[0.5px] border-white/20 bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] p-0.5">
-                <div className="overflow-hidden relative z-10 p-5 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full h-full">
-                  <Experience />
-                </div>
+            <div className="grid gap-8 divide-y divide-white/10 md:grid-cols-2 md:divide-x md:divide-y-0">
+              <div className="pb-8 md:pb-0 md:pr-8">
+                <Experience />
               </div>
-              {/* Education Box */}
-              <div className="flex-1 w-full md:w-1/2 rounded-xl border-[0.5px] border-white/20 bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] p-0.5">
-                <div className="overflow-hidden relative z-10 p-5 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full h-full">
-                  <Education />
-                </div>
+              <div className="pt-8 md:pt-0 md:pl-8">
+                <Education />
               </div>
             </div>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative flex w-full rounded-xl border-[0.5px] border-white/20 transform-gpu bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] cursor-grab z-10 max-sm:h-max p-0.5"
+            className="border-t border-white/10 pt-8"
           >
-            <div className="flex flex-col overflow-hidden size-full relative z-10 p-5 items-start justify-start gap-8 max-sm:gap-4 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full">
-              <TechStack />
-            </div>
+            <TechStack />
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative flex w-full rounded-xl border-[0.5px] border-white/20 transform-gpu bg-dark-1 [box-shadow:0_0px_60px_-20px_#ffffff1f_inset] cursor-grab z-10 max-sm:h-max p-0.5"
+            className="border-t border-white/10 pt-8"
           >
-            <div className="flex flex-col overflow-auto size-full relative z-10 p-5 items-start justify-start gap-8 max-sm:gap-4 text-white border-[0.5px] border-white/20 rounded-xl bg-[#111010] w-full">
-              <Projects />
-            </div>
+            <Projects />
           </motion.div>
         </div>
       </main>
